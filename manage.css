@@ -7,6 +7,10 @@
 body{
     font-family: 'Poppins', sans-serif;
     margin: 0 auto;
+    background-image: url("images/bg-tablet-pattern.svg");
+    background-size: 800px;
+    background-repeat: no-repeat;
+    background-position: 90% -25%;
 }
 
 nav{
@@ -182,6 +186,9 @@ div.card-content img{
 section#simplify{    
     background: hsl(12, 88%, 59%);
     padding: 4rem 0;
+    background-image: url("images/bg-simplify-section-desktop.svg");
+    background-repeat: no-repeat;
+    background-position: 90px -25px;
 }
 
 div.simplify-container{
@@ -309,6 +316,11 @@ div.copyright{
 }
 
 @media screen and (max-width: 850px){    
+    body{
+        background-size: 500px;
+        background-position: 90px -50px;
+    }
+
     div.links{
         display: none;
     }
@@ -411,8 +423,17 @@ div.copyright{
         font-weight: bold;
     }
 
+    div.mobile div.header p{
+        font-weight: bold;
+    }
+
     div.hide-mobile{
         display: none;
+    }
+
+    section#simplify{
+        background-image: url("images/bg-simplify-section-mobile.svg");
+        background-position: 0 -75px;
     }
 
     div.simplify-container{
