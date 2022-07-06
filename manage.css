@@ -143,6 +143,7 @@ section#testimonials{
 div.testimonials-container{
     display: flex;
     flex-direction: column;
+    align-items: center;
     text-align: center;
 }
 
@@ -172,6 +173,23 @@ div.card-content{
     padding: 4rem 0.5rem 1rem 0.5rem;
 }
 
+div.carousel{
+    display: flex;
+    margin-bottom: 3rem;
+    column-gap: 5px;
+}
+
+div.carousel a{
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    color: black;
+    background: hsl(12, 88%, 95%);
+}
+
+div.carousel a:hover, div.carousel a.active{
+    background: hsl(12, 88%, 69%);
+    color: white;
+}
 
 div.card-4.mobile{
     display: none;
