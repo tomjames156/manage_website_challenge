@@ -185,6 +185,10 @@ div.hide{
     display: none;
 }
 
+div.mobile-only{
+    display: none;
+}
+
 div.carousel-arrow a{
     font-size: 3rem;
     text-decoration: none;
@@ -441,6 +445,29 @@ div.copyright{
 
     div.hide-mobile{
         display: none;
+    }
+
+    div.carousel-arrow{
+        display: none;
+    }
+
+    div.mobile-only{
+        display: flex;
+        column-gap: 0.5rem;
+        margin-bottom: 2rem;
+    }
+
+    a.page{
+        padding: 0.25rem 0.5rem;
+        text-decoration: none;
+        font-size: 0.8rem;
+        background: hsl(12, 88%, 95%);
+        color: black;
+    }
+    
+    div.mobile-only a:hover, a.page.active{
+        color: white;
+        background: hsl(12, 88%, 59%);
     }
 
     section#simplify{
