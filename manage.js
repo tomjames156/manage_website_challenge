@@ -14,25 +14,31 @@ hamburgerIcon.addEventListener("click", () =>{
     }
 })
 
+arrows[0].click();
+
 arrows[1].addEventListener("click", () => {
-    for(let i = 0; i < arrows.length; i++){
-        arrows[i].classList.toggle("hide");
-    }
-    resetPagination();
-    pages[3].classList.toggle("active");
-    cards[0].classList.toggle("hide");
-    cards[3].classList.toggle("hide");
+    carouselFuntion(3, 0);
 })
 
-arrows[0].addEventListener("click", () => {
+function carouselFuntion(current, other){
     for(let i = 0; i < arrows.length; i++){
         arrows[i].classList.toggle("hide");
     }
     resetPagination();
-    pages[0].classList.toggle("active");
-    cards[0].classList.toggle("hide");
-    cards[3].classList.toggle("hide");
+    pages[current].classList.add("active");
+    showCards();
+    cards[other].classList.add("hide");
+}
+
+arrows[0].addEventListener("click", () => {
+    carouselFuntion(0, 3);
 })
+
+function showCards(){
+    for(let card of cards){
+        card.classList.remove("hide");
+    }
+}
 
 function resetPagination(){
     for(let page of pages){
@@ -40,10 +46,21 @@ function resetPagination(){
     }
 }
 
-for(i = 0; i < pages.length; i++){
-    let current_index = i;
-    pages[current_index].addEventListener("click", () =>{
-        resetPagination();
-        console.log(current_index);
-    })
+function resetCards(){
+    for(let card of cards){
+        card.classList.add("hide-mobile");
+    }
+}
+
+function showPage(receiver){
+    resetCards();
+    resetPagination();
+    receiver.classList.toggle("active");
+    let index = receiver.innerHTML - 1;
+    if(index == 0){
+        carouselFuntion(0, 3);
+    }else if(index == 3){
+        carouselFuntion(3, 0);
+    }
+    cards[index].classList.toggle("hide-mobile");
 }
