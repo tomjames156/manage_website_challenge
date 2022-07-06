@@ -387,6 +387,7 @@ div.copyright{
         display: flex;
         flex-direction: column-reverse;
         max-width: 95%;
+        row-gap: 2rem;
     }
 
     div.hero-text{
@@ -397,8 +398,8 @@ div.copyright{
         width: 100%;
     }
 
-    section#about{
-        margin-top: 2rem;
+    section#hero{
+        margin-bottom: 4rem;
     }
 
     div.about-container{
@@ -489,6 +490,7 @@ div.copyright{
         flex-direction: column-reverse;
         align-items: center;
         row-gap: 2rem;
+        text-align: center;
     }
 
     div.copyright footer{
