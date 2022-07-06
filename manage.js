@@ -1,6 +1,6 @@
 const hamburgerIcon = document.querySelector("div.hamburger span");
 const hamburgerMenu = document.querySelector("div.hamburger-menu");
-const carouselArrows = document.querySelectorAll("div.carousel-arrow");
+const arrows = document.querySelectorAll("div.carousel-arrow");
 const cards = document.querySelectorAll("div.card")
 
 hamburgerIcon.addEventListener("click", () =>{
@@ -13,16 +13,18 @@ hamburgerIcon.addEventListener("click", () =>{
     }
 })
 
-carouselArrows[1].addEventListener("click", () => {
-    carouselArrows[0].classList.toggle("hide");
-    carouselArrows[1].classList.toggle("hide");
+arrows[1].addEventListener("click", () => {
+    for(let i = 0; i < arrows.length; i++){
+        arrows[i].classList.toggle("hide");
+    }
     cards[0].classList.toggle("hide");
     cards[3].classList.toggle("hide");
 })
 
-carouselArrows[0].addEventListener("click", () => {
-    carouselArrows[0].classList.toggle("hide");
-    carouselArrows[1].classList.toggle("hide");
+arrows[0].addEventListener("click", () => {
+    for(let i = 0; i < arrows.length; i++){
+        arrows[i].classList.toggle("hide");
+    }
     cards[0].classList.toggle("hide");
     cards[3].classList.toggle("hide");
 })
