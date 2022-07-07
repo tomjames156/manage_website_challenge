@@ -69,7 +69,7 @@ section{
 div.hero-container{
     display: flex;
     align-items: center;
-    width: 87%;
+    width: 85%;
     margin: 0 auto;
     justify-content: space-between;
     column-gap: 4rem;
@@ -306,7 +306,7 @@ div.inbox{
     padding-right: 1rem;
 }
 
-div.inbox div input{
+input#inbox{
     padding: 0.5rem 2rem;
     border-radius: 2rem;
     border: none;
@@ -386,7 +386,9 @@ div.copyright{
     div.hero-container{
         display: flex;
         flex-direction: column-reverse;
-        max-width: 95%;
+        align-items: center;
+        text-align: center;
+        width: 95%;
         row-gap: 2rem;
     }
 
@@ -405,13 +407,11 @@ div.copyright{
     div.about-container{
         flex-direction: column;
         width: 95%;
-        margin: 0 auto;
     }
 
     div.about-text{
-        margin: 0 auto;
-        text-align: center;
         width: unset;
+        text-align: center;
     }
 
     div.numbered-list{
@@ -459,15 +459,15 @@ div.copyright{
     }
 
     a.page{
-        padding: 0.25rem 0.5rem;
+        border-radius: 0.7rem;
+        padding: 0.35rem;
+        outline: 1.5px solid hsl(12, 88%, 59%);
         text-decoration: none;
-        font-size: 0.8rem;
-        background: hsl(12, 88%, 95%);
-        color: black;
+        background: white;
+        color: transparent;
     }
     
     div.mobile-only a:hover, a.page.active{
-        color: white;
         background: hsl(12, 88%, 59%);
     }
 
@@ -514,4 +514,15 @@ div.copyright{
         font-size: 2em;
     }
 
+}
+
+@media screen and (max-width: 500px){
+    div.inbox{
+        column-gap: 1rem;
+        margin: 0 auto;
+        padding-right: unset;
+    }
+    input#inbox{
+        padding: 0.5rem 1rem;
+    }
 }

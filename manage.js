@@ -56,7 +56,7 @@ function showPage(receiver){
     resetCards();
     resetPagination();
     receiver.classList.toggle("active");
-    let index = receiver.innerHTML - 1;
+    let index = receiver.id - 1;
     if(index == 0){
         carouselFuntion(0, 3);
     }else if(index == 3){
